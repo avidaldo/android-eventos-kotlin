@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EventosKotlin</string>
+    <string name="button21">Button1</string>
+    <string name="button22">Button2</string>
 </resources>
