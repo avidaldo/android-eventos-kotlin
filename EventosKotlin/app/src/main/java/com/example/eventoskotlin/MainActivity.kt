@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         binding.button01.setOnClickListener { startActivity(Intent(this, Ej01VariantesCallbackActivity::class.java)) }
         binding.button02.setOnClickListener { startActivity(Intent(this, Ej02ContadoresActivity::class.java)) }
         binding.button03.setOnClickListener { startActivity(Intent(this, Ej03BotonCambiaBotonActivity::class.java)) }
+        binding.button04.setOnClickListener { startActivity(Intent(this,
+            Ej4Contadores2Activity::class.java)) }
 
 
 

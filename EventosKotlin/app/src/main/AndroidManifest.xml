@@ -10,17 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EventosKotlin">
         <activity
+            android:name=".Ej4Contadores2Activity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".Ej03BotonCambiaBotonActivity"
             android:exported="false" />
         <activity
-            android:name=".ReutilizandoCallbackActivity"
+            android:name=".Ej02ContadoresActivity"
             android:exported="true" />
         <activity
-            android:name=".Ej02ContadoresActivity"
-            android:exported="true"></activity>
-        <activity
             android:name=".Ej01VariantesCallbackActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
