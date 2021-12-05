@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.eventoskotlin.databinding.ActivityEj4Contadores2Binding
+import com.example.eventoskotlin.databinding.ActivityEj04Contadores2Binding
 import java.lang.NumberFormatException
 import kotlin.random.Random
 
-class Ej4Contadores2Activity : AppCompatActivity() {
+class Ej04Contadores2Activity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityEj4Contadores2Binding
+    private lateinit var binding: ActivityEj04Contadores2Binding
 
 
     /* Utilizamos los setters de las propiedades para actualizar automáticamente la UI */
@@ -28,7 +28,7 @@ class Ej4Contadores2Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityEj4Contadores2Binding.inflate(layoutInflater)
+        binding = ActivityEj04Contadores2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.button1.setOnClickListener {

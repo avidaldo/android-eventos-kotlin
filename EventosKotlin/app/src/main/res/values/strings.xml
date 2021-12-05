@@ -3,4 +3,14 @@
     <string name="button21">Button1</string>
     <string name="button22">Button2</string>
     <string name="no_incremento">Debe definir un incremento numeral para el contador</string>
+    <string name="hasta_luego">Hasta Luego</string>
+    <string name="adios">Adiós</string>
+    <string name="boton_hola">Hola</string>
+    <string name="hola">Hola,</string>
+    <string name="sr">Sr.</string>
+    <string name="sra">Sra.</string>
+    <string name="no_app_error">App no encontrada para ese Intent</string>
+    <string name="error_nombre">ERROR: Debe introducir un nombre.</string>
+    <string name="error_tratamiento">ERROR: Debe elegir un tratamiento.</string>
+    <string name="error_despedida">Debe introducir una despedida</string>
 </resources>

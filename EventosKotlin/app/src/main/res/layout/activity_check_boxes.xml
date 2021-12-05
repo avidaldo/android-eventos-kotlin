@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="60dp"
+    tools:context=".Ej05CheckBoxes1Activity">
+
+    <CheckBox
+        android:id="@+id/cb_jamon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jamón"
+        android:padding="10dp"
+        android:background="@android:color/holo_red_light"
+        app:layout_constraintEnd_toStartOf="@id/cb_queso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_queso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Queso"
+        android:padding="10dp"
+        android:background="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toStartOf="@id/cb_lechuga"
+        app:layout_constraintStart_toEndOf="@id/cb_jamon"
+        app:layout_constraintTop_toTopOf="@id/cb_jamon" />
+
+    <CheckBox
+        android:id="@+id/cb_lechuga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lechuga"
+        android:padding="10dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cb_queso"
+        app:layout_constraintTop_toTopOf="@id/cb_queso" />
+
+    <TextView
+        android:id="@+id/tv_sandwich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_queso" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

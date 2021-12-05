@@ -10,9 +10,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EventosKotlin">
         <activity
-            android:name=".Ej4Contadores2Activity"
-            android:exported="true">
-        </activity>
+            android:name=".ejercicios.Ejercicio03SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.Ejercicio03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ej09DobleToggleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.Ejercicio02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.Ejercicio01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ej08RadioGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkboxes.Ej07CheckBoxes3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".checkboxes.Ej06CheckBoxes2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".checkboxes.Ej05CheckBoxes1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Ej04Contadores2Activity"
+            android:exported="true" />
         <activity
             android:name=".Ej03BotonCambiaBotonActivity"
             android:exported="false" />
