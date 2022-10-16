@@ -17,35 +17,23 @@ class Ej08RadioGroupActivity : AppCompatActivity() {
         binding = ActivityEj08RadioGroupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        // Nuevo Evento
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
-                R.id.silent -> {
-                    Toast.makeText(this, "Silencio", Toast.LENGTH_SHORT).show()
-                }
-                R.id.sound -> {
-                    Toast.makeText(this, "Sonido", Toast.LENGTH_SHORT).show()
-                }
-                else -> {
-                    Toast.makeText(this, "Vibración", Toast.LENGTH_SHORT).show()
-                }
+                R.id.silent -> Toast.makeText(this, "Silencio", Toast.LENGTH_SHORT).show()
+                R.id.sound -> Toast.makeText(this, "Sonido", Toast.LENGTH_SHORT).show()
+                else -> Toast.makeText(this, "Vibración", Toast.LENGTH_SHORT).show()
             }
         }
-
 
         binding.chooseBtn.setOnClickListener {
             when (binding.radioGroup.checkedRadioButtonId) {
-                binding.sound.id -> {
-                    binding.tv07.text = "Has elegido 'Sonido'."
-                }
-                binding.vibration.id -> {
-                    binding.tv07.text = "Has elegido 'Vibración'."
-                }
-                else -> {
-                    binding.tv07.text = "Has elegido 'Silencio'."
-                }
+                binding.sound.id -> binding.tv07.text = "Has elegido 'Sonido'."
+                binding.vibration.id -> binding.tv07.text = "Has elegido 'Vibración'."
+                else -> binding.tv07.text = "Has elegido 'Silencio'."
             }
         }
-
 
     }
 

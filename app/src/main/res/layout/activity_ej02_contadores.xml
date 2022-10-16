@@ -11,7 +11,7 @@
         android:id="@+id/button21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button21"
+        android:text="@string/button21empty"
         app:layout_constraintEnd_toStartOf="@id/textView21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
         android:id="@+id/button22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button22"
+        android:text="@string/button22empty"
         app:layout_constraintEnd_toStartOf="@id/textView22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button21" />

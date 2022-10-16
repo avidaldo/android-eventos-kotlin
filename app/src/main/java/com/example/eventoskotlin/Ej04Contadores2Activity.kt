@@ -1,14 +1,11 @@
 package com.example.eventoskotlin
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.eventoskotlin.databinding.ActivityEj04Contadores2Binding
-import java.lang.NumberFormatException
-import kotlin.random.Random
 
 class Ej04Contadores2Activity : AppCompatActivity() {
 
@@ -18,12 +15,17 @@ class Ej04Contadores2Activity : AppCompatActivity() {
     /* Utilizamos los setters de las propiedades para actualizar automáticamente la UI */
 
     private var cuenta1 = 0
-        set(value) { field=value; binding.tvCuenta1.text = field.toString() }
+        set(value) {
+            field = value; binding.tvCuenta1.text = field.toString()
+        }
     private var cuenta2 = 0
-        set(value) {  field=value; binding.tvCuenta2.text = field.toString() }
+        set(value) {
+            field = value; binding.tvCuenta2.text = field.toString()
+        }
     private var cuentaG = 0
-        set(value) { field=value;  binding.tvCuentaGlobal.text = field.toString() }
-
+        set(value) {
+            field = value; binding.tvCuentaGlobal.text = field.toString()
+        }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,20 +41,20 @@ class Ej04Contadores2Activity : AppCompatActivity() {
                 cuentaG += incremento
             } catch (e: NumberFormatException) {  // Si el EditText de incremento no tiene un número
                 alerta(binding.tvIncremento1, true)
-                Toast.makeText(this, R.string.no_incremento, Toast.LENGTH_SHORT).show()
             }
         }
 
         binding.button2.setOnClickListener {
-            try {
-                val incremento = binding.et2.text.toString().toInt()
+
+            /* Haciendo lo mismo que arriba pero sin excepciones (estilo funcional),
+            capturando si se recibe un null con la scope function let */
+
+            binding.et2.text.toString().toIntOrNull()?.let {
                 alerta(binding.tvIncremento2, false)
-                cuenta2 += incremento
-                cuentaG += incremento
-            } catch (e: NumberFormatException) {
-                alerta(binding.tvIncremento2, true)
-                Toast.makeText(this, R.string.no_incremento, Toast.LENGTH_SHORT).show()
-            }
+                cuenta2 += it
+                cuentaG += it
+            } ?: alerta(binding.tvIncremento2, true)
+
         }
 
         binding.ivReset1.setOnClickListener { cuenta1 = 0 }
@@ -62,8 +64,11 @@ class Ej04Contadores2Activity : AppCompatActivity() {
     }
 
     private fun alerta(tv: TextView, alerta: Boolean) {
-        if (alerta) tv.setTextColor(Color.RED)
-        else tv.setTextColor(Color.BLACK)
+        if (alerta) {
+            tv.setTextColor(Color.RED)
+            Toast.makeText(this, R.string.no_incremento, Toast.LENGTH_SHORT).show()
+        } else tv.setTextColor(Color.BLACK)
+
     }
 
 }

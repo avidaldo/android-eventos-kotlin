@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">EventosKotlin</string>
-    <string name="button21">Button1</string>
-    <string name="button22">Button2</string>
+
+    <string name="button21empty">Button 1</string>
+    <string name="button22empty">Button 2</string>
+    <string name="button21">Button 1 (%1$d)</string>
+    <string name="button22">%1$s (%2$d)</string>
+
+    <!-- Placeholders:
+    https://developer.android.com/guide/topics/resources/string-resource#formatting-strings
+    https://stackoverflow.com/questions/5764548/how-to-concatenate-multiple-strings-in-android-xml
+    -->
+
+
     <string name="no_incremento">Debe definir un incremento numeral para el contador</string>
     <string name="hasta_luego">Hasta Luego</string>
     <string name="adios">Adiós</string>
@@ -13,4 +23,7 @@
     <string name="error_nombre">ERROR: Debe introducir un nombre.</string>
     <string name="error_tratamiento">ERROR: Debe elegir un tratamiento.</string>
     <string name="error_despedida">Debe introducir una despedida</string>
+
+    <string name="has_pulsado">Has pulsado %1$s</string>
+    <string name="hola_desde">Hola desde %1$s</string>
 </resources>
