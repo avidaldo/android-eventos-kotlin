@@ -12,7 +12,7 @@ class Ej02ContadoresActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEj02ContadoresBinding
 
-    var cont1: Int = 0; var cont2: Int = 0; var contGlobal: Int = 0;
+    var cont1 = 0; var cont2 = 0; var contGlobal = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -22,7 +22,7 @@ class Ej01VariantesCallbackActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEj01VariantesCallbackBinding
 
 
-    /** Clase interna que hereda de la interfaz OnclickListener */
+    /** Clase interna que hereda de la interfaz OnClickListener */
     class MyOnClickListener : View.OnClickListener {
         override fun onClick(v: View) {
             accionAsociadaAEvento("Hola")
@@ -51,15 +51,10 @@ class Ej01VariantesCallbackActivity : AppCompatActivity() {
         /** Equivalente a listener mediante clase anónima en Java */
         binding.button11.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
-                Toast.makeText(
-                    this@Ej01VariantesCallbackActivity,
-                    getString(R.string.hola_desde, (v as Button).text),
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@Ej01VariantesCallbackActivity, getString(R.string.hola_desde, (v as Button).text), Toast.LENGTH_SHORT).show()
                 binding.textView.text = getString(R.string.has_pulsado, (v as Button).text)
             }
-        }
-        )
+        })
 
         /** Igual que sucede en Java con las interfaces funcionales
          * (ver https://github.com/avidaldo/android-eventos-java/blob/pasando-funcion-lambda/EventosJava/app/src/main/java/com/example/eventosjava/MainActivity.java),
@@ -67,44 +62,27 @@ class Ej01VariantesCallbackActivity : AppCompatActivity() {
          * pueden ser sustituidas por una función lambda  */
         binding.button12.setOnClickListener { v: View? ->
             Toast.makeText(this, getString(R.string.hola_desde, (v as Button).text), Toast.LENGTH_SHORT).show()
-            binding.textView.text = getString(R.string.has_pulsado, (v as TextView).text)
-            /* También se puede castear a TextView ya que es la clase padre de Button donde
-            se introduce el atributo text (Button es un tipo de TextView) */
+            binding.textView.text = getString(R.string.has_pulsado, (v as TextView).text) /* También se puede castear a TextView ya que es la clase padre de
+            Button donde se introduce el atributo text (Button es un tipo de TextView) */
         }
 
 
-        /** Y en Kotlin, además de una función lambda (que sería lo normal) podría pasarse directamente
-        una función anónima, ya que Kotlin permite tratar a las funciones como objetos */
-        binding.button13.setOnClickListener(
-            fun(v: View?) {
-                Toast.makeText(
-                    this,
-                    getString(R.string.hola_desde, (v as Button).text),
-                    Toast.LENGTH_SHORT
-                ).show()
-                binding.textView.text = getString(R.string.has_pulsado, v.text)
-                /* Como ya ha sido casteado previamente, no es necesario volver a hacerlo */
-            }
-        )
+        /** Y en Kotlin, además de una función lambda (que sería lo normal) podría pasarse directamente una función anónima */
+        binding.button13.setOnClickListener(fun(v: View?) {
+            Toast.makeText(this, getString(R.string.hola_desde, (v as Button).text), Toast.LENGTH_SHORT).show()
+            binding.textView.text = getString(R.string.has_pulsado, v.text)/* Como ya ha sido casteado previamente, no es necesario volver a hacerlo */
+        })
 
 
         /** El tipo del parámetro puede ser inferido por el compilador */
         binding.button14.setOnClickListener { v ->
-            Toast.makeText(
-                this,
-                getString(R.string.hola_desde, (v as Button).text),
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, getString(R.string.hola_desde, (v as Button).text), Toast.LENGTH_SHORT).show()
             binding.textView.text = getString(R.string.has_pulsado, (v as Button).text)
         }
 
         /** Cuando hay un solo parámetro de entrada, puede omitirse y utilizar la palabra reservada "it"  */
         binding.button15.setOnClickListener {
-            Toast.makeText(
-                this,
-                getString(R.string.hola_desde, (it as Button).text),
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, getString(R.string.hola_desde, (it as Button).text), Toast.LENGTH_SHORT).show()
             binding.textView.text = getString(R.string.has_pulsado, it.text)
         }
 

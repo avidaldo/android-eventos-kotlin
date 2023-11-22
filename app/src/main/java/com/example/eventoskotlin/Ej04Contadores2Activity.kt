@@ -21,6 +21,7 @@ class Ej04Contadores2Activity : AppCompatActivity() {
     private var cuenta2 = 0
         set(value) {
             field = value; binding.tvCuenta2.text = field.toString()
+            binding.button2.text = getString(R.string.button21, value)
         }
     private var cuentaG = 0
         set(value) {
