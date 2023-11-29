@@ -36,6 +36,9 @@
             android:name=".checkboxes.Ej05CheckBoxes1Activity"
             android:exported="false" />
         <activity
+            android:name=".Ej04Contadores2PFFPActivity"
+            android:exported="true" />
+        <activity
             android:name=".Ej04Contadores2Activity"
             android:exported="true" />
         <activity

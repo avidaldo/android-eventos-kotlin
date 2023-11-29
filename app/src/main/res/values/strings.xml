@@ -11,7 +11,6 @@
     https://stackoverflow.com/questions/5764548/how-to-concatenate-multiple-strings-in-android-xml
     -->
 
-
     <string name="no_incremento">Debe definir un incremento numeral para el contador</string>
     <string name="hasta_luego">Hasta Luego</string>
     <string name="adios">Adiós</string>
@@ -26,4 +25,6 @@
 
     <string name="has_pulsado">Has pulsado %1$s</string>
     <string name="hola_desde">Hola desde %1$s</string>
+    <string name="btn1Text">Botón 1 (%1d)</string>
+    <string name="btn2Text">Botón 2 (%1d)</string>
 </resources>

@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding.button02.setOnClickListener { startActivity(Intent(this, Ej02ContadoresActivity::class.java)) }
         binding.button03.setOnClickListener { startActivity(Intent(this, Ej03BotonCambiaBotonActivity::class.java)) }
         binding.button04.setOnClickListener { startActivity(Intent(this, Ej04Contadores2Activity::class.java)) }
+        binding.button04pffp.setOnClickListener { startActivity(Intent(this, Ej04Contadores2PFFPActivity::class.java)) }
         binding.button05.setOnClickListener { startActivity(Intent(this, Ej05CheckBoxes1Activity::class.java)) }
         binding.button06.setOnClickListener { startActivity(Intent(this, Ej06CheckBoxes2Activity::class.java)) }
         binding.button07.setOnClickListener { startActivity(Intent(this, Ej07CheckBoxes3Activity::class.java)) }
